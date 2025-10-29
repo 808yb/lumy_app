@@ -1,0 +1,220 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #fbf2f5; /* #ffffff */
+  --foreground: oklch(0.25 0 0); /* #374151 */
+  --card: #d1e0d6; /* richer emerald tint for cards */
+  --card-foreground: oklch(0.25 0 0); /* #374151 */
+  --popover: oklch(1 0 0); /* #ffffff */
+  --popover-foreground: oklch(0.25 0 0); /* #374151 */
+  --primary: #4d765e; /* softer emerald */
+  --primary-foreground: oklch(1 0 0); /* #ffffff */
+  --secondary: #d1e0d6; /* greener secondary */
+  --secondary-foreground: #edfaf2; /* #374151 */
+  --muted: oklch(0.97 0.01 180); /* #ecfeff */
+  --muted-foreground: oklch(0.35 0 0); /* #475569 */
+  --accent: #4d765e; /* align accent to primary */
+  --accent-foreground: oklch(1 0 0); /* #ffffff */
+  --destructive: oklch(0.55 0.25 15); /* #be123c */
+  --destructive-foreground: oklch(1 0 0); /* #ffffff */
+  --border: #d7e5dd; /* green-tinted border */
+  --input: #e9f2ec; /* match card tint */
+  --ring: #4d765e; /* focus ring */
+  --chart-1: #e7efe9;
+  --chart-2: #c9dbcf;
+  --chart-3: #a8c7b4;
+  --chart-4: #7ea78f;
+  --chart-5: #4d765e;
+  --radius: 0.5rem;
+  --sidebar: oklch(1 0 0); /* #ffffff */
+  --sidebar-foreground: oklch(0.25 0 0); /* #374151 */
+  --sidebar-primary: #f1f6f3; /* light emerald tint */
+  --sidebar-primary-foreground: oklch(0.25 0 0); /* #374151 */
+  --sidebar-accent: #4d765e;
+  --sidebar-accent-foreground: oklch(1 0 0); /* #ffffff */
+  --sidebar-border: oklch(0.92 0 0); /* #e5e7eb */
+  --sidebar-ring: #4d765e;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #4d765e;
+  --primary-foreground: oklch(1 0 0); /* #ffffff */
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: #4d765e;
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: #4d765e;
+  --chart-1: #345447;
+  --chart-2: #406553;
+  --chart-3: #4d765e;
+  --chart-4: #79a18e;
+  --chart-5: #a6c3b3;
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #2a3b33; /* subtle dark tint of emerald */
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: #4d765e;
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: #4d765e;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  /* Mobile-specific improvements */
+  @supports (padding: max(0px)) {
+    .pb-safe {
+      padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    }
+    
+    .pt-safe {
+      padding-top: max(0.5rem, env(safe-area-inset-top));
+    }
+    
+    .pl-safe {
+      padding-left: max(0.5rem, env(safe-area-inset-left));
+    }
+    
+    .pr-safe {
+      padding-right: max(0.5rem, env(safe-area-inset-right));
+    }
+  }
+  
+  /* Bottom navigation specific styles */
+  .bottom-nav-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: hsl(var(--background) / 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid hsl(var(--border));
+  }
+  
+  /* Ensure content doesn't get hidden behind fixed navbar */
+  .page-with-bottom-nav {
+    padding-bottom: 5rem; /* 80px - enough space for navbar */
+  }
+  
+  /* Responsive adjustments for different screen sizes */
+  @media (min-width: 640px) {
+    .page-with-bottom-nav {
+      padding-bottom: 5.5rem; /* Slightly more space on larger screens */
+    }
+  }
+  
+  /* Ensure navbar stays centered on larger screens */
+  @media (min-width: 768px) {
+    .bottom-nav-container {
+      max-width: 768px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Improved touch targets */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Smooth scrolling for mobile */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Prevent zoom on input focus */
+  input, textarea, select {
+    font-size: 16px;
+  }
+  
+  /* Better mobile scrolling */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Mobile-friendly focus states */
+  .focus-visible:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  
+  /* Prevent text selection on interactive elements */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+}
