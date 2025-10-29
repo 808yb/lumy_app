@@ -54,7 +54,7 @@ export default function SignupPage() {
       skinType: "Normal",
       hairType: "Normal",
       isAdmin: false,
-      avatar: "/placeholder-user.jpg",
+      avatar: "",
       isLoggedIn: true,
       loginTime: new Date().toISOString()
     }

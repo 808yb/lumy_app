@@ -253,13 +253,7 @@ export default function NewRoutinePage() {
                         checked={isSelected}
                         onCheckedChange={(checked) => handleProductToggle(product.id, checked as boolean)}
                       />
-                      <div className="w-12 h-12 bg-secondary rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center">
-                        <img
-                          src={product.image || "/placeholder.svg"}
-                          alt={product.name}
-                          className="w-8 h-8 object-contain"
-                        />
-                      </div>
+                      <div className="w-12 h-12 bg-secondary rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center" />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center space-x-2 mb-1">
                           <h3 className="font-medium text-card-foreground text-sm">{product.name}</h3>

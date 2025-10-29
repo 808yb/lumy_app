@@ -216,9 +216,7 @@ export default function ProductPage() {
       <div className="flex-1 overflow-y-auto px-4 py-6 space-y-6">
         {/* Product Header */}
         <div className="flex space-x-4">
-          <div className="w-24 h-24 bg-secondary rounded-lg overflow-hidden flex-shrink-0">
-            <img src={product.image || "/placeholder.svg"} alt={product.name} className="w-full h-full object-cover" />
-          </div>
+          <div className="w-24 h-24 bg-secondary rounded-lg overflow-hidden flex-shrink-0" />
           <div className="flex-1 space-y-2">
             <h1 className="text-xl font-semibold text-foreground text-balance">{product.name}</h1>
             <p className="text-muted-foreground">{product.brand}</p>
@@ -331,13 +329,7 @@ export default function ProductPage() {
                 <Card key={alt.id} className="cursor-pointer hover:bg-accent/50 transition-colors">
                   <CardContent className="p-4">
                     <Link href={`/product/${alt.id}`} className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-secondary rounded-lg overflow-hidden flex-shrink-0">
-                        <img
-                          src={alt.image || "/placeholder.svg"}
-                          alt={alt.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                      <div className="w-16 h-16 bg-secondary rounded-lg overflow-hidden flex-shrink-0" />
                       <div className="flex-1 min-w-0">
                         <h4 className="font-medium text-card-foreground truncate">{alt.name}</h4>
                         <p className="text-sm text-muted-foreground">{alt.brand}</p>

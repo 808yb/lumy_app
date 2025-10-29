@@ -19,7 +19,7 @@ const DUMMY_USERS = {
     skinType: "Combination",
     hairType: "Normal",
     isAdmin: true,
-    avatar: "/woman-profile-avatar.png"
+    avatar: ""
   },
   "olivia": {
     password: "olivia123",
@@ -29,7 +29,7 @@ const DUMMY_USERS = {
     skinType: "Combination",
     hairType: "Combination",
     isAdmin: false,
-    avatar: "/woman-profile-avatar.png"
+    avatar: ""
   },
   "demo": {
     password: "demo123",
@@ -39,7 +39,7 @@ const DUMMY_USERS = {
     skinType: "Sensitive",
     hairType: "Dry",
     isAdmin: false,
-    avatar: "/placeholder-user.jpg"
+    avatar: ""
   }
 }
 

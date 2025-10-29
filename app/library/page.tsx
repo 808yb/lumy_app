@@ -74,13 +74,7 @@ export default function LibraryPage() {
                     <Card key={product.id} className="cursor-pointer hover:bg-accent/50 transition-colors">
                       <CardContent className="p-4">
                         <Link href={`/product/${product.id}`} className="flex items-center space-x-4">
-                          <div className="w-16 h-16 bg-secondary rounded-lg overflow-hidden flex-shrink-0">
-                            <img
-                              src={product.image || "/placeholder.svg"}
-                              alt={product.name}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
+                          <div className="w-16 h-16 bg-secondary rounded-lg overflow-hidden flex-shrink-0" />
                           <div className="flex-1 min-w-0">
                             <h3 className="font-medium text-card-foreground truncate">{product.name}</h3>
                             <p className="text-sm text-muted-foreground">{product.brand}</p>

@@ -264,15 +264,7 @@ export default function RoutineDetailPage() {
                         </div>
                         <div className={`w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center transition-all duration-300 ${
                           isCompleted ? "bg-secondary" : "bg-secondary"
-                        }`}>
-                          <img
-                            src={product.image || "/placeholder.svg"}
-                            alt={product.name}
-                            className={`w-8 h-8 object-contain transition-all duration-300 ${
-                              isCompleted ? "opacity-60" : "opacity-100"
-                            }`}
-                          />
-                        </div>
+                        }`} />
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center space-x-2 mb-2">
                             <h3

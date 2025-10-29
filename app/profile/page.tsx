@@ -12,7 +12,7 @@ export default function ProfilePage() {
     name: "Olivia Bennett",
     age: 24,
     membershipType: "Premium Member",
-    avatar: "/woman-profile-avatar.png",
+    avatar: "",
     skinType: "Combination",
     allergies: "None",
     brandPreferences: "Cruelty-free",
@@ -36,7 +36,6 @@ export default function ProfilePage() {
         {/* User Info */}
         <div className="flex flex-col items-center space-y-4">
           <Avatar className="h-20 w-20">
-            <AvatarImage src={user.avatar || "/placeholder.svg"} alt={user.name} />
             <AvatarFallback className="text-lg bg-secondary text-secondary-foreground">
               {user.name
                 .split(" ")

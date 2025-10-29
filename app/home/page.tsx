@@ -175,7 +175,6 @@ export default function HomePage() {
           <CardContent className="p-4">
             <div className="flex items-center space-x-4">
               <Avatar className="h-16 w-16 border-2 border-primary/20 flex-shrink-0">
-                <AvatarImage src={user.avatar || "/placeholder.svg"} alt={user.name} />
                 <AvatarFallback className="text-lg bg-secondary text-secondary-foreground">
                   {user.name[0]}
                 </AvatarFallback>
@@ -242,13 +241,7 @@ export default function HomePage() {
               <Card key={scan.id} className="flex-shrink-0 w-32 cursor-pointer hover:bg-accent/50 transition-colors touch-manipulation">
                 <CardContent className="p-3">
                   <Link href={`/product/${scan.id}`} className="block">
-                    <div className="aspect-square bg-secondary rounded-lg mb-2 overflow-hidden">
-                      <img
-                        src={scan.image || "/placeholder.svg"}
-                        alt={scan.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                    <div className="aspect-square bg-secondary rounded-lg mb-2 overflow-hidden" />
                     <div className="space-y-1">
                       <h3 className="font-medium text-xs text-card-foreground line-clamp-2 leading-tight">{scan.name}</h3>
                       <p className="text-xs text-muted-foreground">
